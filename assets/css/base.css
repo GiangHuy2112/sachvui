@@ -1,0 +1,178 @@
+::selection {
+    color: var(--black-color);
+    background: #fde69a;
+}
+
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #d93;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
+    overflow-y: auto;
+}
+
+.pdr15 {
+    padding-right: 15px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.pdl15 {
+    padding-left: 15px;
+}
+
+.block {
+    display: block;
+}
+
+.bgc-blue {
+    background-color: #1e73be;
+}
+
+.bgc-violet {
+    background-color: #8224e3;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: default;
+    user-select : none;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Button style */
+.btn {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    outline: none;
+    align-items: center;
+    line-height: 1.6rem;
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn--size-s {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--disable {
+    color: #949494;
+    cursor: default;
+    background-color: #c3c3c3;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform:  translateX(100%);
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    display: none;
+    animation: fadeIn linear 0.3s;
+    z-index: 11;
+}
+
+.modal__overlay {  
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .85;
+    visibility: visible;
+}
+
+.mobile-wrapper {
+    margin: auto;
+    transition: transform linear 0.3s, opacity linear 0.3s;
+}
+
+
+
+

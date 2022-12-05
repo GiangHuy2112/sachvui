@@ -1,0 +1,96 @@
+/* Moble & tablet */
+@media (max-width: 1023px) {
+    .header_wrapper {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    .header {
+        height: 48px;
+    }
+
+    .header__logo {
+        width: 71px;
+        height: 40px;
+    }
+
+    .logo_img {
+        width: 71px;
+        height: 40px;
+        display: block;
+    }
+
+    .search-close-icon::after {
+        bottom: -12px;
+        z-index: 10000;
+    }
+
+    .footer_secondary {
+        flex-direction: column-reverse;
+        height: 50px;
+    }
+    .header__search-icon {
+        margin: 0 10px;
+    }
+    .menu {
+        display: block;
+        padding: 0 10px;
+    }
+    .contribute-content,
+    .download-instructions{
+        display: none;
+    }
+
+    .contents {
+        margin-top: 48px !important;
+    }
+
+    .sidebar-content {
+        margin-top: 20px;
+    }
+
+    .book-item {
+        padding: 0;
+    }
+ 
+    .book-item-wrapper {
+        /* padding: 0 0 20px 0; */
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .contents {
+        width: 100%;
+    }
+
+    .search_form::before {
+        right: 52px;
+    }
+    .search_form {
+        right: 50%;
+        transform: translateX(50%);
+        width: 80%;
+    }
+    .search-wrapper {
+        width: 710px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .search_form {
+        right: 50%;
+        transform: translateX(50%);
+        width: 100%;
+    }
+    .search-wrapper {
+        width: 710px;
+    }
+    
+    .book-item-wrapper {
+        padding: 0 0 20px 0;
+    }
+}
